@@ -21,9 +21,21 @@ namespace Chat_Application
             InitializeComponent();
         }
 
-        public void sendMessage()
+        public void sendButton_Click(object sender, RoutedEventArgs e)
         {
-            
+            string OutgoingMessage = messageSendBox.Text.Trim();
+
+            messageReceiveBox.Text = OutgoingMessage;
+        }
+
+        private void messageSendBox_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
+        }
+
+        private void messageSendBox_TextChanged_1(object sender, TextChangedEventArgs e)
+        {
+
         }
     }
 

@@ -5,13 +5,22 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Chat_Application"
         mc:Ignorable="d"
-        Title="ChatWindow" Height="450" Width="800" ResizeMode="CanResize" MaxHeight="450" MaxWidth="800" MinHeight="450" MinWidth="800">
-    <Grid>
-        <Button Name="Send" Content="Send" Height="20" Width="40" Margin="716,373,44,41">
+        Title="ChatWindow" Height="500" Width="850" ResizeMode="CanResize" MaxHeight="500" MaxWidth="850" MinHeight="500" MinWidth="850">
+    <Grid HorizontalAlignment="Center" Width="742" Margin="0,27,0,37">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="Auto"/>
+        </Grid.ColumnDefinitions>
 
-        </Button>
-        <TextBox Name="MessageSendBox"  Height="50" TextAlignment="Center" Margin="26,358,98,26"/>
-        <TextBlock Margin="22,10,22,99" />
+        <TextBlock Name="messageReceiveBox" Margin="22,40,66,125" Grid.Row="0" Grid.ColumnSpan="2"/>
 
+        <TextBox Name="messageSendBox" TextAlignment="Left" Height="30" Margin="0,0,10,20" Grid.Row="1" Grid.Column="0" VerticalAlignment="Bottom"/>
+
+        <Button Name="SendButton" Content="Send" Click="sendButton_Click" Height="30" Width="60" Grid.Row="1" Grid.Column="1" VerticalAlignment="Bottom" Margin="0,0,20,20"/>
     </Grid>
+
 </Window>
